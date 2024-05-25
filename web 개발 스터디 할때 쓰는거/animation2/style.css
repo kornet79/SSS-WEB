@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background: crimson;
+    margin: 100px auto;
+    border-radius: 50%;
+    outline: 1px solid transparent;
+    animation: circle 2s 1s infinite alternate;
+}
+    /*
+    설명
+    에니메이션 속성을 게속 사용가능
+    circle = 이름
+    2s = 진행시간
+    1s = 딜레이 -> 2초가 끝나고 1초뒤에 다시 진행
+    infinite = 무한반복
+    alterante = 에니메이션연결을 똑바로 진행하고,
+    리버스도 시켜주게 함
+    */
+
+    @keyframes circle {
+        0% {
+            border-radius : 20% 30% 20% 0%;
+            width: 50px;
+            height: 50px;
+            background: darkred;
+            
+        }
+        30% {
+            border-radius : 0% 30% 40% 30%;
+            width: 100px;
+            height: 150px;
+            background: coral;
+        }
+        60% {
+            border-radius : 40% 0% 40% 50%;
+            width: 150px;
+            height: 150px;
+            background: pink;
+        }
+        100%{
+            border-radius : 50% 50% 0% 50%;
+            width: 50px;
+            height: 50px;
+            background: lightblue;
+        }
+    }
